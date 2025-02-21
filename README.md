@@ -1,6 +1,8 @@
 # Crypto Board WebApp
 
-[**English**](#crypto-board-webapp) | [**Українська**](#crypto-board-webapp-ukrayinska-versiya) | [**Русский**](#crypto-board-webapp-russkaya-versiya)
+<a id="crypto-board-webapp"></a>
+# Crypto Board WebApp
+
 
 ## 🌎 Overview
 Crypto Board WebApp is a powerful platform for real-time cryptocurrency tracking, analysis, and management. Designed with ease of use in mind, the app provides access to up-to-date information, automatically refreshing data every 1-3 minutes.

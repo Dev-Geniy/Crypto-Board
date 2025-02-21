@@ -24,6 +24,17 @@ We welcome contributions from the community! Want to improve Crypto Board WebApp
 
 Your contributions make this project better for everyone!
 
+# Developer
+
+This application was created by **DevGeniy**, who strives to improve the project every day. If you have ideas for improvements or suggestions, feel free to visit his profile on [X](https://x.com/HotDog850642) and get in touch with him.
+
+DevGeniy is always open to new ideas and is ready to consider updates that will help enhance the functionality of the project. You can suggest your changes and ideas.  
+Join in and help make Crypto Board WebApp even better!
+
+## Contact the Developer
+
+For questions, feedback, or comments, you can use the profile on [X](https://x.com/HotDog850642).
+
 ## 💰 Support the Project
 If you enjoy Crypto Board WebApp, you can support its development by donating:
 

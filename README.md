@@ -26,9 +26,9 @@ Your contributions make this project better for everyone!
 If you enjoy Crypto Board WebApp, you can support its development by donating:
 
 ### Cryptocurrency Addresses (Click to Copy)
-- **Bitcoin (BTC):** `bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq` *(Click to copy)*
-- **Ethereum (ETH):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A` *(Click to copy)*
-- **USDT (ERC-20):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A` *(Click to copy)*
+- **Bitcoin (BTC):** `bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq`
+- **Ethereum (ETH):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A`
+- **USDT (ERC-20):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A`
 
 Simply click an address to copy it to your clipboard!
 

@@ -20,7 +20,7 @@ We welcome contributions from the community! Want to improve Crypto Board WebApp
 3. **Submit** a pull request with a detailed description of your changes.
 4. **Join** discussions in issues to suggest new features or report bugs.
 
-Your contributions make this project better for everyone! 🎉
+Your contributions make this project better for everyone!
 
 ## 💰 Support the Project
 If you enjoy Crypto Board WebApp, you can support its development by donating:
@@ -30,22 +30,13 @@ If you enjoy Crypto Board WebApp, you can support its development by donating:
 - **Ethereum (ETH):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A` *(Click to copy)*
 - **USDT (ERC-20):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A` *(Click to copy)*
 
-Simply click an address to copy it to your clipboard! 🎯
+Simply click an address to copy it to your clipboard!
 
 ## 🔧 Technologies Used
-- **⚡ Modern UI/UX**: Clean, responsive, and user-friendly design.
-- **📡 Live Data Fetching**: Powered by CoinGecko API.
-- **🔒 Secure & Efficient**: Optimized performance with minimal latency.
-- **🎨 Dark & Light Modes**: Seamless experience in any environment.
+- ** Modern UI/UX**: Clean, responsive, and user-friendly design.
+- ** Live Data Fetching**: Powered by CoinGecko API.
+- ** Secure & Efficient**: Optimized performance with minimal latency.
+- ** Dark & Light Modes**: Seamless experience in any environment.
 
 ## 📜 License
-Crypto Board WebApp is an open-source project licensed under the **MIT License**. Feel free to use, modify, and contribute! 🛠️
-
----
-
-## 🌍 Crypto Board WebApp (Українська версія)
-[Український опис збережено без змін, але включає функцію копіювання для підтримки]
-
-## 🌏 Crypto Board WebApp (Русская версия)
-[Русский текст также обновлен с поддержкой копирования и современными улучшениями]
-
+Crypto Board WebApp is an open-source project licensed under the **MIT License**. Feel free to use, modify, and contribute!

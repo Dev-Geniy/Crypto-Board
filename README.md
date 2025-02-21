@@ -7,8 +7,18 @@ Crypto Board WebApp is a user-friendly platform for real-time cryptocurrency tra
 - **Real-Time Tracking**: Instantly access prices, market cap, and 24-hour changes.
 - **Powerful Search and Filtering**: Easily search by name or symbol.
 - **Detailed Insights**: Full metrics on each cryptocurrency for informed decisions.
+- **Favorite List**: Users can mark cryptocurrencies as favorites for quick access.
+- **Infinite Scrolling**: Automatically loads more cryptocurrencies as you scroll.
+- **Comprehensive Recommendations**: Provides insights based on price changes and circulating supply.
 
-CryptoDashboard is ideal for anyone who wants to stay ahead in the fast-paced world of cryptocurrencies.
+## How to Contribute
+We welcome contributions from the community! If you'd like to improve the project:
+1. Fork the repository on GitHub.
+2. Create a new branch for your feature or bug fix.
+3. Submit a pull request with a detailed description of your changes.
+4. Join the discussion in issues to suggest new features or report bugs.
+
+Your contributions help make this project better for everyone!
 
 ---
 
@@ -19,8 +29,18 @@ Crypto Board WebApp — це зручна платформа для відсте
 - **Відстеження в реальному часі**: миттєвий доступ до цін, капіталізації та змін за 24 години.
 - **Потужний пошук і фільтрація**: зручний пошук за назвою чи символом.
 - **Детальна аналітика**: повні метрики по кожній криптовалюті для обґрунтованих рішень.
+- **Список улюблених**: можливість додавати криптовалюти у вибране.
+- **Безкінечне завантаження**: нові криптовалюти завантажуються автоматично під час прокрутки.
+- **Рекомендації**: детальний аналіз змін цін і циркулюючого обсягу.
 
-CryptoDashboard ідеально підходить для тих, хто хоче залишатися в курсі новин у світі криптовалют.
+## Як долучитися
+Ми вітаємо внески від спільноти! Якщо ви хочете покращити проект:
+1. Форкніть репозиторій на GitHub.
+2. Створіть нову гілку для вашої функції чи виправлення.
+3. Відправте pull request із детальним описом змін.
+4. Приєднуйтесь до обговорень, щоб пропонувати нові функції або повідомляти про помилки.
+
+Ваші внески допомагають зробити цей проект кращим для всіх!
 
 ---
 
@@ -31,6 +51,15 @@ Crypto Board WebApp — это удобная и мощная платформа
 - **Отслеживание криптовалют в реальном времени**: мгновенный доступ к ценам, капитализации и изменениям за 24 часа.
 - **Мощный поиск и фильтрация**: удобный поиск по имени или символу криптовалюты.
 - **Подробные данные**: полные метрики по каждой валюте для информированного принятия решений.
+- **Список избранного**: возможность отмечать криптовалюты как избранные.
+- **Бесконечная прокрутка**: автоматическая загрузка новых криптовалют по мере прокрутки страницы.
+- **Расширенные рекомендации**: анализ изменения цен и циркулирующего объема.
 
-CryptoDashboard идеально подходит для тех, кто хочет всегда оставаться в курсе событий в мире криптовалют.
+## Как помочь проекту
+Мы приглашаем всех желающих участвовать в развитии проекта! Если вы хотите помочь:
+1. Сделайте форк репозитория на GitHub.
+2. Создайте новую ветку для своей функции или исправления.
+3. Отправьте pull request с описанием внесенных изменений.
+4. Участвуйте в обсуждениях, предлагайте идеи и сообщайте об ошибках.
 
+Ваш вклад помогает сделать этот проект лучше для всех!

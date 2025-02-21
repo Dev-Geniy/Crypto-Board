@@ -1,7 +1,6 @@
 # Crypto Board WebApp
 
-<a id="crypto-board-webapp"></a>
-# Crypto Board WebApp
+
 
 
 ## 🌎 Overview
@@ -85,6 +84,8 @@ Crypto Board WebApp — це потужна платформа для відст
 Crypto Board WebApp — це проект з відкритим вихідним кодом, ліцензований під **MIT License**. Ви можете вільно використовувати, змінювати та вносити свій вклад!
 
 ---
+<a id="crypto-board-webapp"></a>
+# Crypto Board WebApp
 
 # Crypto Board WebApp (Русская версия)
 

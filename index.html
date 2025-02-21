@@ -1,0 +1,229 @@
+<html lang="ru">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Crypto Board WebApp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Индикатор загрузки (по умолчанию скрыт) -->
+<div id="loadingIndicator" style="display:none;">
+  <img src="https://i.gifer.com/ZKZx.gif" alt="Загрузка..." />
+</div>
+  
+  <div class="container">
+  <div class="search-container">
+    <input type="text" id="cryptoSearch" placeholder="Поиск криптовалют..." oninput="filterCryptos()" />
+    
+<i id="refreshButton" class="crv fas fa-sync-alt"></i>  </div>
+  <div id="cryptoList" class="crypto-list">
+    <!-- Криптовалюты будут загружаться сюда -->
+  </div>
+</div>
+
+  <!-- Современное модальное окно -->
+<div id="cryptoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <!-- Заголовок -->
+    <div class="crypto-header">
+      <h2 id="cryptoName" class="crypto-title"></h2>
+        <div class="crypto-logo">
+        <img id="cryptoLogo" src="" alt="Crypto Logo">
+      </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="modal-body">
+
+      <!-- Карточка цены -->
+      <div class="card card-full-width">
+        <div class="card-header animated-header">
+          <span>Текущая цена</span>
+        </div>
+        <div class="card-content price-content">
+          <span id="cryptoPrice" class="price"></span>
+        </div>
+      </div>
+
+      <!-- Три карточки в одну строку -->
+      <div class="card-row">
+        <div class="card card-small">
+          <div class="card-header">
+            <span>Изменение за 24ч</span>
+          </div>
+          <div class="card-content">
+            <span id="cryptoChange" class="change"></span>
+          </div>
+        </div>
+        <div class="card card-small">
+          <div class="card-header">
+            <span>Рыночная капитализация</span>
+          </div>
+          <div class="card-content">
+            <span id="cryptoMarketCap" class="market-cap"></span>
+          </div>
+        </div>
+        <div class="card card-small">
+          <div class="card-header">
+            <span>Циркулирующий объём</span>
+          </div>
+          <div class="card-content">
+            <span id="cryptoSupply" class="supply"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Советы -->
+      <div class="recommendation-section">
+        <h3>Рекомендации:</h3>
+        <div id="cryptoPriceChangeRecommendation" class="recommendation animated-recommendation"></div>
+        <div id="cryptoRecommendation" class="recommendation animated-recommendation"></div>
+        <div id="cryptoSupplyRecommendation" class="recommendation animated-recommendation"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="info-container">
+    <h2 class="app-title">Crypto Board WebApp</h2>
+    
+    <!-- Описание приложения на русском языке -->
+    <div class="app-description" id="description-ru">
+        <p>Crypto Board WebApp — это удобная и мощная платформа для отслеживания, анализа и управления криптовалютами в реальном времени. Разработанное для удобства, приложение обеспечивает доступ к актуальной информации, обновляя данные каждые 1-3 минуты автоматически.</p>
+        <h4>Преимущества:</h4>
+        <ul>
+            <li><strong>Отслеживание криптовалют в реальном времени</strong>: мгновенный доступ к ценам, капитализации и изменениям за 24 часа.</li>
+            <li><strong>Мощный поиск и фильтрация</strong>: удобный поиск по имени или символу криптовалюты.</li>
+            <li><strong>Подробные данные</strong>: полные метрики по каждой валюте для информированного принятия решений.</li>
+        </ul>
+        <p>CryptoDashboard идеально подходит для тех, кто хочет всегда оставаться в курсе событий в мире криптовалют.</p>
+
+    <h3>Проект полностью бесплатный, поддержите его развитие!</h3>
+    <p>Теперь у нас появилась возможность принимать пожертвования. Благодаря вашим взносам проект остаётся бесплатным, и каждый может помочь в той мере, в которой может. Все полученные средства мы направляем на развитие технологий, расширение партнёрств, улучшение функционала и поддержку нашей команды.</p>
+    
+    <div class="crypto-addresses">
+      <h4>Адреса для пожертвований:</h4>
+      
+      <div class="address">
+          <span>Btc:</span>
+          <input type="text" value="bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq" readonly>
+          <a class="copy-button" onclick="copyToClipboard('bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq')">❏</a>
+      </div>
+      
+      
+      <div class="address">
+          <span>Eth:</span>
+          <input type="text" value="0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A" readonly>
+          <a class="copy-button" onclick="copyToClipboard('0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A')">❏</a>
+      </div>
+      
+      <div class="address">
+          <span>Usdt:</span>
+          <input type="text" value="0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A" readonly>
+          <a class="copy-button" onclick="copyToClipboard('0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A')">❏</a>
+      </div>
+    </div>
+    
+    <h3 style="text-align: center;">Спасибо за вашу поддержку!</h3>
+  </div>
+
+
+<!-- Description in English -->
+<div class="app-description" id="description-en" style="display: none;">
+    <p>Crypto Board WebApp is a user-friendly platform for real-time cryptocurrency tracking, analysis, and management. Designed for ease of use, the app provides access to up-to-date information, automatically refreshing data every 1-3 minutes.</p>
+    <h4>Key Benefits:</h4>
+    <ul>
+        <li><strong>Real-Time Tracking</strong>: Instantly access prices, market cap, and 24-hour changes.</li>
+        <li><strong>Powerful Search and Filtering</strong>: Easily search by name or symbol.</li>
+        <li><strong>Detailed Insights</strong>: Full metrics on each cryptocurrency for informed decisions.</li>
+    </ul>
+    <p>CryptoDashboard is ideal for anyone who wants to stay ahead in the fast-paced world of cryptocurrencies.</p>
+
+    <h3>The project is completely free, support its development!</h3>
+    <p>We now have the ability to accept donations. Thanks to your contributions, the project remains free, and everyone can help in any way they can. All funds received are directed towards the development of technologies, expanding partnerships, improving functionality, and supporting our team.</p>
+    
+    <div class="crypto-addresses">
+      <h4>Donation Addresses:</h4>
+      
+      <div class="address">
+          <span>Btc:</span>
+          <input type="text" value="bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq" readonly>
+          <a class="copy-button" onclick="copyToClipboard('bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq')">❏</a>
+      </div>
+      
+      <div class="address">
+          <span>Eth:</span>
+          <input type="text" value="0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A" readonly>
+          <a class="copy-button" onclick="copyToClipboard('0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A')">❏</a>
+      </div>
+      
+      <div class="address">
+          <span>Usdt:</span>
+          <input type="text" value="0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A" readonly>
+          <a class="copy-button" onclick="copyToClipboard('0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A')">❏</a>
+      </div>
+    </div>
+    
+    <h3 style="text-align: center;">Thank you for your support!</h3>
+</div>
+
+
+<!-- Описание на украинском -->
+<div class="app-description" id="description-ua" style="display: none;">
+    <p>Crypto Board WebApp — це зручна платформа для відстеження, аналізу та керування криптовалютами в режимі реального часу. Розроблений для зручності, додаток надає доступ до актуальної інформації, оновлюючи дані кожні 1-3 хвилини автоматично.</p>
+    <h4>Переваги:</h4>
+    <ul>
+        <li><strong>Відстеження в реальному часі</strong>: миттєвий доступ до цін, капіталізації та змін за 24 години.</li>
+        <li><strong>Потужний пошук і фільтрація</strong>: зручний пошук за назвою чи символом.</li>
+        <li><strong>Детальна аналітика</strong>: повні метрики по кожній криптовалюті для обґрунтованих рішень.</li>
+    </ul>
+    <p>CryptoDashboard ідеально підходить для тих, хто хоче залишатися в курсі новин у світі криптовалют.</p>
+
+    <h3>Проект повністю безкоштовний, підтримайте його розвиток!</h3>
+    <p>Тепер у нас є можливість приймати пожертвування. Завдяки вашим внескам проект залишається безкоштовним, і кожен може допомогти в тій мірі, в якій може. Усі отримані кошти ми направляємо на розвиток технологій, розширення партнерств, поліпшення функціоналу та підтримку нашої команди.</p>
+    
+    <div class="crypto-addresses">
+      <h4>Адреси для пожертвувань:</h4>
+      
+      <div class="address">
+          <span>Btc:</span>
+          <input type="text" value="bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq" readonly>
+          <a class="copy-button" onclick="copyToClipboard('bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq')">❏</a>
+      </div>
+      
+      <div class="address">
+          <span>Eth:</span>
+          <input type="text" value="0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A" readonly>
+          <a class="copy-button" onclick="copyToClipboard('0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A')">❏</a>
+      </div>
+      
+      <div class="address">
+          <span>Usdt:</span>
+          <input type="text" value="0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A" readonly>
+          <a class="copy-button" onclick="copyToClipboard('0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A')">❏</a>
+      </div>
+    </div>
+    
+    <h3 style="text-align: center;">Дякуємо за вашу підтримку!</h3>
+</div>
+
+    <!-- Кнопки переключения языка -->
+    <div class="language-buttons">
+        <button onclick="setLanguage('en')">Eng</button>
+        <button onclick="setLanguage('ua')">Ua</button>
+        <button onclick="setLanguage('ru')">Ru</button>
+    </div>
+</div>
+  
+  <script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></script>
+<gecko-coin-price-marquee-widget locale="ru" dark-mode="true" outlined="true" coin-ids="sui,pepe,kaspa,dogecoin,solana,ripple,bonk,shiba-inu,bitcoin-cash,aptos,uniswap,ethereum-classic,blockstack,optimism,celestia,cosmos,sei-network,bitcoin,binancecoin,okb,hedera-hashgraph,arbitrum,beam-2,ethereum,tron,the-open-network,polkadot,near,litecoin,stellar,internet-computer,ethena-usde,polygon-ecosystem-token,kucoin-shares,helium,raydium,quant-network,jupiter-staked-sol" initial-currency="usd"></gecko-coin-price-marquee-widget>
+  
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

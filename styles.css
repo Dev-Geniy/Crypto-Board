@@ -1,0 +1,558 @@
+/* Основные стили для темной темы */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Настройка внешнего вида скроллбара на всей странице */
+html {
+    scrollbar-width: thin;        /* Для Firefox, делаем скролбар тонким */
+    scrollbar-color: #4fffaa transparent; /* Цвет ползунка и прозрачная дорожка для Firefox */
+}
+
+/* Для WebKit-браузеров (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;               /* Ширина вертикального скроллбара */
+    height: 12px;              /* Высота горизонтального скроллбара */
+  
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(18, 18, 18, 0.5); /* Полупрозрачная дорожка */
+    border-radius: 10px;        /* Скругленные углы для дорожки */
+  
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4fffaa;  /* Основной цвет ползунка */
+    border-radius: 10px;   /* Скругленные углы ползунка */
+    animation: neonFlickerInput 1.5s infinite; /* Применение анимации */
+}
+
+/* Анимация для неонового ползунка */
+@keyframes neonFlickerInput {
+  0%, 100% {
+    border-color: #4fffaa;
+    box-shadow: 0 0 8px #4fffaa, 0 0 16px #4fffaa, 0 0 24px #4fffaa;
+  }
+  10%, 90% {
+    border-color: #00ffcc;
+    box-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc, 0 0 24px #00ffcc;
+  }
+  20%, 80% {
+    border-color: #00ffcc;
+    box-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc, 0 0 24px #00ffcc;
+  }
+  30%, 70% {
+    border-color: #4fffaa;
+    box-shadow: 0 0 8px #4fffaa, 0 0 16px #4fffaa, 0 0 24px #4fffaa;
+  }
+  40%, 60% {
+    border-color: #00ffcc;
+    box-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc, 0 0 24px #00ffcc;
+  }
+  50% {
+    border-color: #4fffaa;
+    box-shadow: 0 0 8px #4fffaa, 0 0 16px #4fffaa, 0 0 24px #4fffaa;
+  }
+}
+
+/* Убираем стрелки прокрутки */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  animation: neonFlickerInput 1.5s infinite;
+}
+
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  color: #4fffaa;
+  font-weight: bold;
+  text-align: center; /* Центрирование текста по горизонтали */
+  text-shadow: 0 0 8px #4fffaa, 0 0 16px #4fffaa, 0 0 24px #4fffaa;
+  animation: neonFlicker 2s infinite alternate;
+  margin-bottom: 5px;
+
+}
+
+/* Обертка для контента */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#cryptoSearch {
+  width: 100%; /* Занимает всю доступную ширину контейнера */
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#refreshButton {
+  font-size: 2.5rem;  /* Размер иконки */
+  color: #4fffaa;   /* Цвет иконки */
+  background: transparent;  /* Прозрачный фон */
+  border: none;    /* Без границы */
+  transition: transform 0.3s ease, color 0.3s ease;  /* Плавный переход для увеличения и изменения цвета */
+  cursor: pointer;  /* Курсор в виде руки */
+  margin: 10px;  /* Отступы снаружи (по бокам) */
+  display: block;  /* Чтобы иконка занимала пространство */
+  text-align: center;  /* Центрирование содержимого */
+  padding: 10px;  /* Отступы внутри */
+}
+
+#refreshButton:hover {
+  transform: scale(1.2);  /* Увеличение иконки при наведении */
+  color: #00ffcc;  /* Изменение цвета при наведении */
+}
+
+button {
+  position: avto;
+  font-family: 'Courier New', Courier, monospace; /* Шрифт как у заголовка */
+  font-size: 1.5rem; /* Размер шрифта для кнопок */
+  color: #4fffaa; /* Цвет текста кнопки */
+  font-weight: bold;
+  border: 2px solid #4fffaa; /* Граница в цвет шрифта */
+  background-color: transparent; /* Прозрачный фон для кнопки */
+  text-shadow: 0 0 8px #4fffaa, 0 0 16px #4fffaa, 0 0 24px #4fffaa; /* Эффект свечения */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Плавное изменение при наведении */
+}
+
+button:hover {
+  background-color: #4fffaa; /* Цвет фона при наведении */
+  color: #000; /* Изменение цвета текста на черный при наведении */
+  text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc, 0 0 24px #00ffcc; /* Более яркое свечение при наведении */
+}
+
+
+
+
+/* Стилизация списка криптовалют */
+.crypto-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.crypto-item {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .crypto-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .crypto-item {
+    flex: 1 1 100%;
+  }
+}
+
+/* Стили для отображения роста и падения */
+.positive {
+  color: #4caf50; /* Зелёный для роста */
+}
+
+.negative {
+  color: #f44336; /* Красный для падения */
+}
+
+.neutral {
+  color: #9e9e9e; /* Серый цвет для нейтрального */
+  font-weight: bold;
+}
+
+.crypto-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.crypto-logo {
+  width: 128px;
+  height: 128px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.crypto-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили для контейнера поисковой строки и кнопки */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Стили для кнопки "Обновить данные" */
+.crv {
+  font-size: 40px;
+  text-align: center;
+  color: #4d4d4d;
+  animation: spinAndScale 1s infinite linear;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавный переход для opacity и transform */
+  background: transparent; /* Убираем фон */
+  border: none; /* Убираем границу */
+}
+
+/* Увеличение при наведении */
+.crv:hover {
+  animation: spinAndScaleHover 1s infinite linear; /* Анимация при наведении */
+}
+
+/* Эффект нажатия (не видно фона, только прозрачность) */
+.crv:active {
+  opacity: 0.5; /* Лёгкая прозрачность при нажатии */
+  background: transparent; /* Убираем фон при нажатии */
+  border: none; /* Убираем границу при нажатии */
+}
+
+/* Обычная анимация вращения */
+@keyframes spinAndScale {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Анимация вращения и увеличения при наведении */
+@keyframes spinAndScaleHover {
+  0% { transform: rotate(0deg) scale(1.4); } /* Увеличение до 140% */
+  100% { transform: rotate(360deg) scale(1.4); }
+}
+
+
+
+/* ЗВЕЗДЫ*/
+/* Звезда для избранного */
+.crypto-star {
+  font-size: 24px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #bbb; /* Цвет по умолчанию */
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.crypto-star:hover {
+  transform: scale(1.5); /* Увеличение звезды до 150% */
+  color: gold; /* Звезда становится золотой при наведении */
+}
+
+/* Звезда активного избранного */
+.crypto-star.active {
+  color: gold;
+}
+
+/* ОТТЕНКИ КАРТОЧЕК */
+.falling-card {
+  background-color: rgba(255, 99, 71, 0.2); /* Лёгкий красный оттенок */
+}
+
+.rising-card {
+  background-color: rgba(34, 139, 34, 0.2); /* Лёгкий зелёный оттенок */
+}
+
+/* Основной стиль контейнера */
+.info-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Темный прозрачный фон */
+    color: #ffffff; /* Белый цвет текста */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Стили кнопок смены языка*/
+.language-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.language-buttons button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-buttons button:hover {
+    background-color: #555;
+}
+
+/* Стили для модального окна */
+/* Скрыть полосу прокрутки в модальном окне, но прокрутка остаётся */
+.modal {
+  overflow: hidden; /* Скрывает стандартную полосу прокрутки */
+}
+
+/* Скрытие полос прокрутки для содержимого модального окна */
+.modal-content {
+  overflow: scroll; /* Включает прокрутку, но полоса прокрутки скрыта */
+  -webkit-overflow-scrolling: touch; /* Для плавной прокрутки на мобильных устройствах */
+}
+
+/* Скрытие полос прокрутки в модальном окне */
+.modal::-webkit-scrollbar, .modal-content::-webkit-scrollbar {
+  display: none; /* Скрываем полосы прокрутки */
+}
+
+/* Модальное окно */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  overflow: auto; /* Добавлено для прокрутки при большом контенте */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: #25263d;
+  color: #fff;
+  margin: 5% auto; /* Уменьшено значение для лучшей адаптивности */
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh; /* Максимальная высота относительно окна */
+  overflow-y: auto; /* Вертикальная прокрутка, если содержимое превышает высоту */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  animation: scaleUp 0.3s ease-out;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  color: #bbb;
+  font-size: 28px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Заголовок модального окна */
+.crypto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.crypto-title {
+  font-size: 1.8rem;
+  color: #f0f0f0;
+}
+
+.crypto-logo img {
+  height: 60px;
+  width: 60px;
+  
+}
+
+/* Карточки */
+.card {
+  background: linear-gradient(135deg, #292a3d, #1e1e2f);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card-header {
+  font-size: 1.4rem;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.card-content {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  color: #00d09c;
+  font-size: 1.8rem;
+}
+
+.change {
+  font-weight: bold;
+}
+
+.market-cap,
+.supply {
+  font-size: 1.2rem;
+}
+
+.recommendation {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Кнопки */
+.widget-toggle button {
+  width: 100%;
+  background: linear-gradient(135deg, #0088ff, #0055ff);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.widget-toggle button:hover {
+  background: linear-gradient(135deg, #0066cc, #003399);
+  transform: translateY(-2px);
+}
+
+/* Визуальные эффекты для взаимодействия */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px #00aaff;
+  }
+  50% {
+    box-shadow: 0 0 20px #00aaff;
+  }
+}
+
+.toggle-button {
+  background: #333;
+  color: #ddd;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.toggle-button:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+
+/* КРИПТО АДРЕСА*/
+.copy-button {
+    position: flex;
+    background-color: #4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.copy-button:hover {
+    background-color: #444;
+}
+
+/* иконки */
+.crypto-addresses {
+    margin-top: 20px;
+}
+
+.crypto-addresses h4 {
+    margin-bottom: 10px;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.address span {
+    margin-right: 10px;
+}
+
+.address input {
+    flex:1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+

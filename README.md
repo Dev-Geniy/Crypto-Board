@@ -20,6 +20,14 @@ We welcome contributions from the community! If you'd like to improve the projec
 
 Your contributions help make this project better for everyone!
 
+## Support the Project
+If you like Crypto Board WebApp, you can support its development by donating:
+- **Bitcoin (BTC):** `bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq`
+- **Ethereum (ETH):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A`
+- **USDT (ERC-20):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A`
+
+Thank you for your support!
+
 ---
 
 ## Crypto Board WebApp (Українська версія)
@@ -62,4 +70,10 @@ Crypto Board WebApp — это удобная и мощная платформа
 3. Отправьте pull request с описанием внесенных изменений.
 4. Участвуйте в обсуждениях, предлагайте идеи и сообщайте об ошибках.
 
-Ваш вклад помогает сделать этот проект лучше для всех!
+## Поддержка проекта
+Если вам нравится Crypto Board WebApp, вы можете поддержать его развитие:
+- **Bitcoin (BTC):** `bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq`
+- **Ethereum (ETH):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A`
+- **USDT (ERC-20):** `0x6DCB8490bFD12Ab30FCc2d3Afb9A242F5CF0D31A`
+
+Спасибо за вашу поддержку!
